@@ -20,7 +20,12 @@ A3 : - software upgrade
      - incident
        สามารถลดปัญหา downtime ที่เกิดจาก incident ได้ โดยการใช้ logging และ monitoring ให้เกิดประโยชน์สูงสุดเท่าที่ทำได้ เนื่องจากสองสิ่งนี้จะเป็นตัวบอกถึงสัญญาณการเกิดปัญหาในอนาคตได้
 
- Q4 : Configuration management
-      a. Which Among Puppet, chef, Ansible, or another is the best Configuration management tool?
-      b. Why?
-      c. Do you still need to use it if you already have docker-swarm or Kubernetes?
+Q4 : Configuration management
+     a. Which Among Puppet, chef, Ansible, or another is the best Configuration management tool?
+     b. Why?
+     c. Do you still need to use it if you already have docker-swarm or Kubernetes?
+A4 : a. Ansible
+     b. เรียนรู้ง่ายและไวกว่า สำหรับคนที่เคยใช้ Kubernetes อยู่แล้ว เนื่องจากภาษาที่ใช้ในการ config เป็น Python กับ YAML
+     c. ใช้ เพราะสามารถใช้ร่วมกันได้
+
+Q5 : How do you design your Kubernetes cluster? what DNS, CNI, ingression is being used? Why?
