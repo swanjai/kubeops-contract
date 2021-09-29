@@ -13,4 +13,14 @@ Q3 : Base on your experience, how do you reduce your service downtime as much as
 ·  	software upgrade
 ·  	database migration
 ·  	incident
-A3 : 
+A3 : - software upgrade
+       ในปัจจุบันมี Container Orchestration อย่าง Kubernetes ที่สามารถช่วยในเรื่อง autoscaling ทำให้สามารถช่วยลด downtime ขณะ upgrade application ได้
+     - database migration
+       ในปัจจุบันมี tools หลากหลายที่ช่วยในการทำ database migration ซึ่งทำให้ลด downtime ขณะ migration ได้
+     - incident
+       สามารถลดปัญหา downtime ที่เกิดจาก incident ได้ โดยการใช้ logging และ monitoring ให้เกิดประโยชน์สูงสุดเท่าที่ทำได้ เนื่องจากสองสิ่งนี้จะเป็นตัวบอกถึงสัญญาณการเกิดปัญหาในอนาคตได้
+
+ Q4 : Configuration management
+      a. Which Among Puppet, chef, Ansible, or another is the best Configuration management tool?
+      b. Why?
+      c. Do you still need to use it if you already have docker-swarm or Kubernetes?
