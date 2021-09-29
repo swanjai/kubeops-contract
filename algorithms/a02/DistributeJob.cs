@@ -7,7 +7,7 @@ namespace a02
 {
     public class DistributeJob
     {
-        public void Distribute(int nServer, int nJob)
+        public static void Distribute(int nServer, int nJob)
         {
             int equalJob = nJob/nServer;
             int noOwnerJob = nJob%nServer;

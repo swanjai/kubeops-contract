@@ -14,8 +14,7 @@ namespace a02
                 Console.WriteLine("Please enter the number of jobs.");
                 int nJob = int.Parse(Console.ReadLine());
 
-                DistributeJob distributeJob = new DistributeJob();
-                distributeJob.Distribute(nServer, nJob);
+                DistributeJob.Distribute(nServer, nJob);
             }
             catch (System.Exception)
             {                

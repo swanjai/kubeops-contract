@@ -30,8 +30,7 @@ namespace a03
                     Console.WriteLine("{0} : {1}", kvp.Key, kvp.Value);
                 }
                 
-                BalanceBook balanceBook = new BalanceBook();
-                balanceBook.Balance(memberDict);
+                BalanceBook.Balance(memberDict);
             }
             catch (System.Exception)
             {                

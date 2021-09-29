@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace a04
+namespace a05
 {
     class Program
     {
@@ -8,14 +8,15 @@ namespace a04
         {
             try
             {
-                Console.WriteLine("Please enter number");
-                int n = int.Parse(Console.ReadLine());  
-                Console.WriteLine(Fibonacci.Get(n));
+                Console.WriteLine("Please enter string.");
+                string s = Console.ReadLine();
+                Console.WriteLine("IsPalindrome : " + IsPalindrome.Check(s));
             }
             catch (System.Exception)
             {                
                 throw;
-            }            
+            }
+            
         }
     }
 }

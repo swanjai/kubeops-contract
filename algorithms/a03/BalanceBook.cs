@@ -7,7 +7,7 @@ namespace a03
 {
     public class BalanceBook
     {
-        public void Balance(Dictionary<string, decimal> memberDict)
+        public static void Balance(Dictionary<string, decimal> memberDict)
         {
             var averageScore = memberDict.Values.Average();
             Console.WriteLine("=====> Average = " + averageScore);
