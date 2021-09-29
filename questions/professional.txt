@@ -29,3 +29,7 @@ A4 : a. Ansible
      c. ใช้ เพราะสามารถใช้ร่วมกันได้
 
 Q5 : How do you design your Kubernetes cluster? what DNS, CNI, ingression is being used? Why?
+A5 :
+
+Q6 : How do you measure service quality to give the best experience to your customer? (SLO, SLA)
+A6 : 
