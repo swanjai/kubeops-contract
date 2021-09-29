@@ -7,11 +7,12 @@ namespace a02
 {
     public class DistributeJob
     {
-        public string Distribute(int nServer, int nJob)
+        public void Distribute(int nServer, int nJob)
         {
             int equalJob = nJob/nServer;
             int noOwnerJob = nJob%nServer;
             List<int> serverJobList = new List<int>();
+            //List<int[]> distributeJobList = new List<int[]>();
 
             for (int i = 0; i < nServer; i++)
             {
@@ -37,9 +38,9 @@ namespace a02
                 }
 
                 Console.WriteLine("Server " + (i+1) + " (" + arr.Length + ")" + " : " + String.Join(",", arr));
+                //distributeJobList.Add(arr);
             }
-
-            return "===== END =====";
+            Console.WriteLine("===== END =====");
         }
     }
 }

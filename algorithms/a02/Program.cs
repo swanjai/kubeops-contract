@@ -15,7 +15,7 @@ namespace a02
                 int nJob = int.Parse(Console.ReadLine());
 
                 DistributeJob distributeJob = new DistributeJob();
-                Console.WriteLine(distributeJob.Distribute(nServer, nJob));
+                distributeJob.Distribute(nServer, nJob);
             }
             catch (System.Exception)
             {                
