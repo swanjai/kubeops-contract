@@ -36,10 +36,8 @@ namespace a02
                     j++;
                 }
 
-                Console.WriteLine("Server " + (i+1) + " : " + String.Join(",", arr));
+                Console.WriteLine("Server " + (i+1) + " (" + arr.Length + ")" + " : " + String.Join(",", arr));
             }
-
-            //Console.WriteLine(String.Join("\n", distributeJobList));
 
             return "===== END =====";
         }
