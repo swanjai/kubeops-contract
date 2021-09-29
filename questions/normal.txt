@@ -1,0 +1,59 @@
+Q1 : Describe Git branching strategies (Git-flow, single branch, feature branch etc.) which you have used and what purpose does it serves.
+A1 : ที่เคยใช้น่าจะใกล้เคียงกับ feature branch ครับ 
+    โดยแยก develop branch ออกมาจาก master ก่อน
+    แล้วค่อยแยก feature branch ออกไปจาก develop branch
+    ถ้า dev feature เสร็จแล้วก็จะ merge code จาก feature branch ต่างๆ ไปที่ develop branch
+    ระหว่างนี้ถ้ามี deploy ที่ dev environment จะ build จาก development branch
+    แต่ถ้าจะ deploy ขึ้น Production จะ merge code ไป master ก่อนน แล้ว build จาก master ไป deploy Production ครับ
+
+Q2 : How do you revert a commit that has already been pushed and made public?
+A2 : git revert <commit-id ที่ต้องการ undo>
+
+Q3 : How do you normally solve conflicts in a feature branch before merge?
+A3 : compare file ที่ conflict แล้วคุยกันว่าตรงไหนจะ merge หรือตรงไหนจะไม่เอา
+
+Q4 : “200 OK” what does it mean and show use case this HTTP Status?
+A4 : request สำเร็จ เช่น request api ผ่าน GET POST PUT DELETE เป็นต้น
+
+Q5 : “201 Created” what does it mean and show use case this HTTP Status?
+A5 : request สำเร็จ และได้สร้างอะไรบางอย่างเรียบร้อยแล้ว เช่น request api ไปให้สร้าง record ใน database
+
+Q6 : “301 Moved Permanently” what does it mean and show use case this HTTP Status?
+A6 : การย้ายไปที่ URL ใหม่ เช่น การทำ redirect จาก myweb.com ไป mynewweb.com
+
+Q7 : “400 Bad Request” what does it mean and how to identify the problem?
+A7 : request ไม่ถูกต้อง เช่น request api โดยที่ส่ง parameter ไปไม่ครบ
+     เบื้องต้นตรวจสอบ request ที่ส่งไปว่าถูกต้องหรือไม่
+
+Q8 : “401 Unauthorized” what does it mean and how to identify the problem?
+A8 : ไม่สามารถระบุตัวตนได้ เช่น request api ที่ต้องการ authorization จากการ login มาก่อน
+     แก้ไขด้วยการ request ไป login ก่อน
+
+Q9 : “403 Forbidden” what does it mean and how to identify the problem?
+A9 : ไม่มีสิทธิ์ เช่น request api ที่ role ของเราไม่มี permission ในการเข้าถึง
+     เบื้องต้นตรวจสอบ permission ก่อนว่ามีสิทธื์เข้าถึงไหม
+
+Q10 : “404 Not Found” what does it mean and how to identify the problem?
+A10 : route ที่ request ไป ไม่มีอยู่จริง เช่น request api ผิด จาก ./getname เป็น ./getnam
+      เบื้องต้นตรวจสอบ route/url ที่ request ไปว่ามีอยู่จริงไหม ถูกต้องหรือไม่
+
+Q11 : “500 Internal Server Error” what does it mean and how to identify the problem?
+A10 : เกิดความผิดพลาดที่ server เช่น function ที่ request อาจทำงานผิดพลาดและเกิด error ที่ไม่ได้ handle ไว้
+      เบื้องต้นดู log ก่อนเพื่อหาปัญหาที่เกิดขึ้น
+
+Q12 : “502 Bad Gateway” what does it mean and how to identify the problem?
+A12 : server ได้รับ error จากอีก server เช่น เข้า website ไม่ได้แล้วเจอ error นี้
+      เบื้องต้นอาจลอง refresh หน้า web ดูว่าสามารถเข้าได้ไหม
+
+Q13 : “503 Service Unavailable” what does it mean and how to identify the problem?
+A13 : server ไม่สามารถจัดการกับ request ได้ชั่วคราว อาจเป็นเพราะ server เต็มหรืออาจจะกำลัง maintainace อยู่
+      สามารถลอง request ใหม่ได้ในภายหลัง
+
+Q14 : “504 Gateway Timeout” what does it mean and how to identify the problem?
+A14 : request ไม่ได้รับการตอบกลับเป็นเวลานานเกินไป เช่น reqest ไปดึงข้อมูลที่ server แล้ว server นั้นไปเรียกข้อมูลที่ databse server ซึ่งอาจจะ connect database ไม่ได้ และใช้เวลานานในการรอ
+      เบื้องต้นอาจตรวจสอบ network/internet ก่อนว่าปกติไหม
+
+Q15 : What are Linux network tools do you use for troubleshooting network problems as well as usage scenarios for each tool?
+A15 : ipconfig ตรวจสอบ ip
+      ping ตรวจสอบ network จากเครื่องเราไปอีกเครื่อง
+      telnet ตรวจสอบ port

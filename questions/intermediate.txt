@@ -1,0 +1,23 @@
+Q1 : Assume we have an application that is designed as below. Our application stopped responding due to an extremely high number of clients in some circumstances.
+-	We have tried scaling a number of API Gateway and Service A nodes but it didn’t help. What are the possible problems that lies in our system in which components and how to fix them?
+A1 : อาจจะมี task หรือ process ไหนที่ใช้งาน cpu หรือ memory มากผิดปกติ จนทำให้ resource ไม่พอ
+     ถ้าบน server ทั่วไปอาจจะต้องตามหา task นั้นให้เจอแล้ว kill ทิ้ง เพื่อให้ระบบกลับมาทำงานปกติก่อน แล้วรีบแก้ไข
+     ถ้าเป็นบน k8s สามาร scale resource เพิ่มได้ อาจจะ scale แค่ cpu/memory หรือจะ scale pod ก็ได้
+
+Q2 : How do you keep the docker image smallest as possible?
+A2 : - ใช้ ทmulti-stage builds
+     - ใช้ base image ขนาดเล็ก
+     - ใช้ .dockerignore เพื่อเอาเฉพาะไฟล์ที่สำคัญจริงๆ
+
+Q3 : What is the difference between overlay, bridge, host network in Docker? When to use each of them?
+A3 : - overlay เป็นการรัน container ที่มีการคุยกันข้าม docker daemons หรือ host network
+     - bridge เป็นการรัน container ที่สามารถออก internet ได้ ซึ่ง Bridge จะมี Subnet และ Gateway เป็นของตัวเอง เหมาะสำหรับการสร้าง network เล็กๆ ที่อยู่บน host เดียวกัน
+     - host การรัน container บน host network เลย จะไม่มีการแยก network ระหว่าง container และ docker host เหมือนใน bridge
+
+Q4 : How does the Kubernetes service talk to each other in the same cluster?
+A4 : ClusterIP
+
+Q5 : What’s different between L2, L4, and L7 Load balancers? When to use it?
+A5 : - L2-Data Link เป็นการเชื่อมต่อข้อมูลแบบ node to node รับส่งข้อมูลจาก network layer เช่น MAC Address
+     - L4-Transport เป็นเส้นทางการรับส่งข้อมูลจาก network และ transport layer protocol เช่น IP address และ TCP Port
+     - L7-Application ช่วยกำหนดเส้นทางตาม attribute ต่างๆ เช่น HTTP/HTTPS, SSL หรือ HTML form data
