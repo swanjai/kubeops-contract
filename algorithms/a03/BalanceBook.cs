@@ -18,7 +18,6 @@ namespace a03
                 var name = kvp.Key;
                 var change = Math.Round((kvp.Value - averageScore), 2);
                 changeDict.Add(name, change);
-                //Console.WriteLine("Key = {0}, Value = {1}", name, change);
             }
 
             Console.WriteLine("===== Name & Change =====");
