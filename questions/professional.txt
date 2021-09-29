@@ -1,0 +1,16 @@
+Q1 : Assume that you are using a private cloud for your infrastructure. How do you manage logs, metrics, and alerts for your infrastructure and applications? Which tools do you use and why?
+A1 : ELK, Prometheus และ Grafana เนื่องจากเป็น open source ที่ค่อนข้างนิยมใช้กัน มีการ update เรื่อยๆ และมี community ที่ค่อนข้างใหญ่
+     ในการการใช้งานก็ใช้งานได้ง่ายเนื่องจาก Kibana และ Grafana มี GUI Dashboard ที่สามารถดูข้อมูลได้หลากหลาย
+
+Q2 : 2.	How do you secure the following?
+·  	application
+·  	infrastructure
+·  	data
+A2 : ต้องรู้จักการทำงานของ tools หรือ technologies ที่ใช้อยู่ โดยต้องรู้ลึกและรู้จริง เพื่อให้มองเห็นช่องโหว่หรือจุดบอดของระบบ ซึ่งการรักษาความปลอดภัยของแต่ละ technologies นั้นก็ต่างกันออกไป
+     เช่น หากใช้ Kubernetes ก็ต้องรู้การทำงานของ cluster, container, service และอื่นๆ ส่วนในเรื่องของ security ก็จะต้องเข้าใจ Cloud Native Security, Pod Security และ Controlling Access เป็นต้น
+
+Q3 : Base on your experience, how do you reduce your service downtime as much as possible during
+·  	software upgrade
+·  	database migration
+·  	incident
+A3 : 
