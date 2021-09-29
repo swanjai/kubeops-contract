@@ -1,0 +1,10 @@
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\bin\Debug\netcoreapp2.0\a04.deps.json
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\bin\Debug\netcoreapp2.0\a04.runtimeconfig.json
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\bin\Debug\netcoreapp2.0\a04.runtimeconfig.dev.json
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\bin\Debug\netcoreapp2.0\a04.dll
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\bin\Debug\netcoreapp2.0\a04.pdb
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\obj\Debug\netcoreapp2.0\a04.csproj.CoreCompileInputs.cache
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\obj\Debug\netcoreapp2.0\a04.AssemblyInfoInputs.cache
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\obj\Debug\netcoreapp2.0\a04.AssemblyInfo.cs
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\obj\Debug\netcoreapp2.0\a04.dll
+D:\Source\kubeops-contract\kubeops-contract\algorithms\a04\obj\Debug\netcoreapp2.0\a04.pdb
